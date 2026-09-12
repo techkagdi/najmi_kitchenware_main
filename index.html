@@ -60,42 +60,86 @@
   .reveal-stagger.in > *:nth-child(7){transition-delay:.39s;}
   .reveal-stagger.in > *:nth-child(8){transition-delay:.45s;}
 
-  /* ---------- Header ---------- */
+  /* ---------- Header : bulletproof fixed navbar ---------- */
   header{
-    position:fixed; top:0; left:0; right:0; z-index:100;
+    position:fixed; top:0; left:0; right:0; z-index:1000;
     display:flex; align-items:center; justify-content:space-between;
-    padding:26px 32px;
+    padding:22px 32px;
+    transform:translateZ(0); -webkit-transform:translateZ(0);
+    will-change:transform, background;
     background:linear-gradient(to bottom, rgba(10,10,10,.82), rgba(10,10,10,0));
-    transition:background .35s ease, padding .35s ease, backdrop-filter .35s ease;
+    transition:background .35s ease, padding .35s ease, box-shadow .35s ease;
   }
   header.scrolled{
-    background:rgba(10,10,10,.94); padding:16px 32px; backdrop-filter:blur(10px);
+    background:rgba(10,10,10,.95); padding:14px 32px;
+    -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
     border-bottom:1px solid rgba(200,135,63,.18);
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
   }
-  .logo{ color:#fff; font-size:21px; letter-spacing:.02em;}
+  .logo{ color:#fff; font-size:21px; letter-spacing:.02em; position:relative; z-index:1002; }
   .logo span{ color:var(--accent); }
-  nav.primary-nav ul{list-style:none; display:flex; gap:38px;}
-  nav.primary-nav a{color:#fff; font-size:14px; letter-spacing:.02em; position:relative; padding:4px 0;}
+  nav.primary-nav ul{ list-style:none; display:flex; gap:38px; }
+  nav.primary-nav a{
+    color:#fff; font-size:14px; letter-spacing:.02em; position:relative; padding:4px 0;
+    transition:color .3s ease;
+  }
   nav.primary-nav a::after{
     content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--accent);
     transition:width .3s var(--ease);
+    box-shadow:0 0 8px rgba(200,135,63,.6);
   }
-  nav.primary-nav a:hover::after{width:100%;}
-  .nav-toggle{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; z-index:110;}
-  .nav-toggle span{width:24px; height:2px; background:#fff; display:block; transition:.25s;}
-  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .nav-toggle.open span:nth-child(2){opacity:0;}
-  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  nav.primary-nav a:hover{ color:var(--accent); }
+  nav.primary-nav a:hover::after{ width:100%; }
+
+  /* hamburger */
+  .nav-toggle{
+    display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer;
+    position:relative; z-index:1002; padding:10px; margin:-10px;
+  }
+  .nav-toggle span{
+    width:24px; height:2px; background:#fff; display:block; border-radius:2px;
+    transition:transform .35s var(--ease), opacity .25s ease;
+  }
+  .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity:0; transform:scaleX(0); }
+  .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  /* mobile menu — full-screen overlay, never scrolls with page */
   @media(max-width:900px){
+    header{ padding:18px 22px; }
+    header.scrolled{ padding:14px 22px; }
+    .nav-toggle{ display:flex; }
     nav.primary-nav{
-      position:fixed; inset:0; background:var(--ink);
+      position:fixed; top:0; left:0; right:0; height:100vh; height:100dvh;
+      background:rgba(10,10,10,.985);
+      -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
       display:flex; align-items:center; justify-content:center;
-      transform:translateX(100%); transition:transform .4s var(--ease);
+      transform:translateY(-102%);
+      transition:transform .5s var(--ease);
+      z-index:1001;
+      visibility:hidden;
+      box-shadow:0 30px 60px rgba(0,0,0,.5);
     }
-    nav.primary-nav.open{transform:translateX(0);}
-    nav.primary-nav ul{flex-direction:column; align-items:center; gap:30px;}
-    nav.primary-nav a{font-size:22px;}
-    .nav-toggle{display:flex;}
+    nav.primary-nav.open{ transform:translateY(0); visibility:visible; }
+    nav.primary-nav ul{ flex-direction:column; align-items:center; gap:8px; width:100%; padding:0 24px; }
+    nav.primary-nav li{
+      width:100%; text-align:center;
+      opacity:0; transform:translateY(18px);
+      transition:opacity .45s ease, transform .45s var(--ease);
+    }
+    nav.primary-nav.open li{ opacity:1; transform:translateY(0); }
+    nav.primary-nav.open li:nth-child(1){ transition-delay:.10s; }
+    nav.primary-nav.open li:nth-child(2){ transition-delay:.16s; }
+    nav.primary-nav.open li:nth-child(3){ transition-delay:.22s; }
+    nav.primary-nav.open li:nth-child(4){ transition-delay:.28s; }
+    nav.primary-nav.open li:nth-child(5){ transition-delay:.34s; }
+    nav.primary-nav.open li:nth-child(6){ transition-delay:.40s; }
+    nav.primary-nav a{
+      display:block; font-size:clamp(24px,6vw,30px); font-family:'Fraunces',serif; font-weight:500;
+      padding:14px 0; color:#fff;
+    }
+    nav.primary-nav a::after{ left:50%; transform:translateX(-50%); }
+    nav.primary-nav a:hover::after{ width:60px; }
   }
 
   /* ---------- Hero : animated light-grid + glow ---------- */
@@ -431,6 +475,7 @@
   @keyframes pop{ from{ transform:scale(0); opacity:0;} to{ transform:scale(1); opacity:1;} }
 </style>
 
+<base target="_blank">
 </head>
 <body class="locked">
 
@@ -513,9 +558,9 @@
       <p>Every piece at Najmi Kitchenware tells a story of craftsmanship. Rooted in the heart of Bharuch, we've furnished homes and hotel kitchens for years.</p>
       <p>Good cooking starts with the right tools — so we bring you India's most trusted brands, all under one roof, at honest prices.</p>
       <div class="stats">
-        <div class="stat"><b>11+</b><span>Leading Brands</span></div>
-        <div class="stat"><b>1000+</b><span>Happy Customers</span></div>
-        <div class="stat"><b>Est.</b><span>In Bharuch</span></div>
+        <div class="stat"><b>21+</b><span>Leading Brands</span></div>
+        <div class="stat"><b>1 Lakh+</b><span>Happy Customers</span></div>
+        <div class="stat"><b>Est. 1980</b><span>In Bharuch</span></div>
       </div>
     </div>
   </div>
@@ -636,7 +681,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <span class="logo" style="font-size:20px;">NAJMI</span>
+        <span class="logo" style="font-size:20px;">NAJMI Kitchenware</span>
         <p>Bharuch's trusted kitchenware showroom — the right tools for every kitchen.</p>
         <div class="foot-social">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -665,7 +710,7 @@
     </div>
     <div class="bottom-bar">
       <span>© 2026 Najmi Kitchenware. All rights reserved.</span>
-      <span>Design by <a href="https://www.linkedin.com/in/juzar-kagdi-517b64231" target="_blank" style="text-decoration:underline;">Juzar Kagdi</a></span>
+      <span>Design by <a href="https://hatimiinnovations.com" target="_blank" style="text-decoration:underline;">Hatimi Innovations</a></span>
     </div>
   </div>
 </footer>
@@ -894,19 +939,24 @@
     header.classList.toggle('scrolled', window.scrollY > 30);
   });
 
-  // mobile nav toggle
+  // mobile nav toggle — full-screen overlay with body scroll-lock
   const navToggle = document.getElementById('nav-toggle');
   const primaryNav = document.getElementById('primary-nav');
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    primaryNav.classList.toggle('open');
-  });
+
+  function setMenu(open){
+    navToggle.classList.toggle('open', open);
+    primaryNav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('locked', open);   // freeze page scroll behind overlay
+  }
+  navToggle.addEventListener('click', () => setMenu(!primaryNav.classList.contains('open')));
   document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.classList.remove('open');
-      primaryNav.classList.remove('open');
-    });
+    link.addEventListener('click', () => setMenu(false));
   });
+  // close on Escape, orientation change, or resizing up to desktop
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) setMenu(false); });
 
   // scroll reveal
   const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
