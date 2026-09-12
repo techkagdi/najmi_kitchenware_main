@@ -1,540 +1,1149 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link
-    rel="icon"
-    href="images/logoo.png"
-    type="image/x-icon"
-    width="32"
-    height="32"
-/>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Najmi Kitchenware — Bharuch</title>
+<meta name="description" content="Najmi Kitchenware, Bharuch — 11+ trusted brands including Hawkins-Futura, Borosil, Milton, Panasonic and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#f7f5f0;
+    --mute:#65625a;
+    --hair:#e1ddd3;
+    --hair-dark:rgba(255,255,255,.16);
+    --accent:#c8873f;
+    --accent-dark:#a06a2e;
+    --accent-soft:rgba(200,135,63,.12);
+    --ease:cubic-bezier(.16,.8,.3,1);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:'Inter',sans-serif; font-size:16px; line-height:1.7;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  body.locked{ overflow:hidden; height:100vh; }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:'Fraunces',serif; font-weight:500; line-height:1.12; letter-spacing:-.01em;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{font-size:12.5px; color:var(--accent-dark); letter-spacing:.1em; margin-bottom:12px; text-transform:uppercase; font-weight:600;}
+  section{padding:120px 0;}
+  @media(max-width:768px){ section{padding:76px 0;} }
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Najmi kitchenware</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-   </head>
-   <body>
-      <!-- header top section start -->
-   
-      <!-- header top section start -->
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" style=" 
-               background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity and color as needed */
-               backdrop-filter: blur(5px); /* Apply blur effect to navbar background */
-              
-              border-radius: 5px;
-               padding: 10px 20px;
-               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#brands">Brands</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#about_section">About</a>
-                     </li>
-                    
-                     
-                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">Testimonial</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                     </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                     <div class="login_text">
-                        <ul>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        </ul>
-                     </div>
-                     <div class="quote_btn"><a href="#map">Visit Us</a></div>
-                  </form>
-               </div>
-            </nav>
-         </div>
-         <!-- banner section start -->
-         <div class="banner_section layout_padding">
-            <div id="my_slider" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                 
-                  <div class="carousel-item active">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main"><br><br>  <br>
-                                 <h1 class="banner_taital" style="   text-shadow: 1px 1px 2px black;
-                         ">NAJMI KITCHENWARE</h1>
-                                 <p class="banner_text">We offer a wide range of kitchen essentials, from cutting-edge gadgets to timeless cookware, designed to elevate your culinary experience. 
-                                 <br>Whether you’re a professional chef or a home cook, Our products will inspire you to create delicious meals with ease and precision</p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="#contact">Contact US</a></div>
-                                    <div class="started_text"><a href="#about_section">About Us</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                 
-               </div>
-             
-            </div>
-         </div>
-        <!-- banner section end -->
-      </div>
-      <!-- header section end -->
-      <!-- services section start -->
-      <div class="services_section layout_padding" id="brands">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="services_taital">Our Brands</h1>
-                  <p class="services_text_1">Your Kitchen, Your Style</p>
-               </div>
-            </div>
-            <div class="services_section_2"> 
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main ">
-                        <div class=""><img src="images/cooker.jpg"></div>
-                        <h4 class="development_text">HAWKINS-FUTURA</h4>
-                        <p class="services_text">Discover the superior cooking experience with Futura Non Stick products. Known for their advanced non-stick coating and durable construction, Futura offers a range of cookware that ensures easy cooking and effortless cleaning. From frying pans to saucepans, each Futura Non Stick product is designed to deliver excellent heat distribution and lasting performance in your kitchen.</p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main">
-                        <div class=""><img src="images/mixer.jpg"></div>
-                        <h4 class="development_text">BOROSSIL</h4>
-                        <p class="services_text">Elevate your dining experience with Borosil Dinner Sets. Crafted from premium borosilicate glass,these are only elegant but also durable and heat-resistant. Whether you're hosting a dinner party or enjoying a family meal, Borosil dinner sets add a touch of sophistication to any table setting. Explore our selection of Borosil dinner sets to find the perfect match for your style and dining needs. </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main">
-                        <div class=""><img src="images/tawa.jpg"></div>
-                        <h4 class="development_text">MILTON</h4>
-                        <p class="services_text" style="font-weight: 600;">  
-                           Discover our collection of high-quality Milton products, renowned for their durability and functionality.
-                            From insulated water bottles that keep your beverages hot or cold for hours to stylish lunch boxes and storage containers, Milton offers innovative solutions for your kitchen and home needs. Explore our range of Milton products and bring reliability and convenience into your daily life.</p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main">
-                        <div class=""><img src="images/utensilset.jpg"></div>
-                        <h4 class="development_text">PANASONIC</h4>
-                        <p class="services_text">Experience the power and versatility of Panasonic Mixers. Designed for efficiency and precision, Panasonic mixers are ideal for whipping up everything from smoothies to dough with ease. Featuring robust motors and ergonomic designs, Panasonic mixers deliver reliable performance for all your blending and mixing tasks.Bring innovation into your kitchen today.</p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- services section end -->
-      <!-- about sectuion start -->
-      <div class="about_section layout_padding" id="about_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <h1 class="about_taital">About Us</h1>
-                  <p class="about_text">Welcome to Najmi Kitchenware, where passion meets practicality in every culinary creation.
+  /* ---------- preloader ---------- */
+  #preloader{
+    position:fixed; inset:0; z-index:999; background:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+  }
+  #preloader svg{ width:120px; height:120px; filter:drop-shadow(0 0 10px rgba(200,135,63,.65)); }
+  #preloader path{ fill:none; stroke:var(--accent); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
 
-                     At Najmi Kitchenware, we believe that the heart of a home lies in its kitchen. That’s why we’re dedicated to providing you with the finest kitchenware and dining essentials that blend functionality with aesthetics. Our commitment to quality craftsmanship and customer satisfaction drives everything we do.
-                     
-                     Whether you’re equipping a professional kitchen, or simply upgrading your cookware, Najmi Kitchenware is here to support your culinary journey. Explore our carefully curated collection and discover how our products can enhance your cooking experience.
-                     
-                     Join us as we continue to innovate and inspire, one kitchen at a time.</p><div class="read_bt_1"><a href="#">Read More</a></div>
-               </div>
-               <div class="col-md-6">
-                  <div class="about_img">
-                     <div class="video_bt">
-                    
-                     </div>
-                  </div>
-               </div>
-            </div><br>
-         </div>
+  /* ---------- reveal on scroll ---------- */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .reveal-stagger > *{ opacity:0; transform:translateY(24px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal-stagger.in > *{ opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(1){transition-delay:.03s;}
+  .reveal-stagger.in > *:nth-child(2){transition-delay:.09s;}
+  .reveal-stagger.in > *:nth-child(3){transition-delay:.15s;}
+  .reveal-stagger.in > *:nth-child(4){transition-delay:.21s;}
+  .reveal-stagger.in > *:nth-child(5){transition-delay:.27s;}
+  .reveal-stagger.in > *:nth-child(6){transition-delay:.33s;}
+  .reveal-stagger.in > *:nth-child(7){transition-delay:.39s;}
+  .reveal-stagger.in > *:nth-child(8){transition-delay:.45s;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:26px 32px;
+    background:linear-gradient(to bottom, rgba(10,10,10,.82), rgba(10,10,10,0));
+    transition:background .35s ease, padding .35s ease, backdrop-filter .35s ease;
+  }
+  header.scrolled{
+    background:rgba(10,10,10,.94); padding:16px 32px; backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(200,135,63,.18);
+  }
+  .logo{ color:#fff; font-size:21px; letter-spacing:.02em;}
+  .logo span{ color:var(--accent); }
+  nav.primary-nav ul{list-style:none; display:flex; gap:38px;}
+  nav.primary-nav a{color:#fff; font-size:14px; letter-spacing:.02em; position:relative; padding:4px 0;}
+  nav.primary-nav a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--accent);
+    transition:width .3s var(--ease);
+  }
+  nav.primary-nav a:hover::after{width:100%;}
+  .nav-toggle{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; z-index:110;}
+  .nav-toggle span{width:24px; height:2px; background:#fff; display:block; transition:.25s;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  @media(max-width:900px){
+    nav.primary-nav{
+      position:fixed; inset:0; background:var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      transform:translateX(100%); transition:transform .4s var(--ease);
+    }
+    nav.primary-nav.open{transform:translateX(0);}
+    nav.primary-nav ul{flex-direction:column; align-items:center; gap:30px;}
+    nav.primary-nav a{font-size:22px;}
+    .nav-toggle{display:flex;}
+  }
+
+  /* ---------- Hero : animated light-grid + glow ---------- */
+  .hero{
+    background:var(--ink); color:#fff; position:relative;
+    min-height:100vh; display:flex; flex-direction:column; justify-content:space-between;
+    overflow:hidden;
+  }
+  #hero-grid{ position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none; }
+  .hero-glow{
+    position:absolute; border-radius:50%; filter:blur(90px); pointer-events:none; z-index:0;
+    will-change:transform;
+  }
+  .hero-glow-a{
+    width:560px; height:560px; top:-160px; right:-130px;
+    background:radial-gradient(circle, rgba(200,135,63,.09), transparent 70%);
+    animation:driftA 18s ease-in-out infinite alternate;
+  }
+  .hero-glow-b{
+    width:480px; height:480px; bottom:-170px; left:-150px;
+    background:radial-gradient(circle, rgba(200,135,63,.05), transparent 70%);
+    animation:driftB 22s ease-in-out infinite alternate;
+  }
+  @keyframes driftA{ from{transform:translate(0,0) scale(1);} to{transform:translate(-80px,70px) scale(1.16);} }
+  @keyframes driftB{ from{transform:translate(0,0) scale(1.12);} to{transform:translate(90px,-60px) scale(1);} }
+  .hero::before{
+    content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 42%, transparent 38%, rgba(10,10,10,.6) 100%);
+  }
+  .hero-grid{
+    position:relative; z-index:3; display:grid; grid-template-columns:1.15fr .85fr;
+    gap:40px; align-items:center; flex:1; padding-top:130px; padding-bottom:70px;
+  }
+  .hero h1{
+    font-size:clamp(48px,7.4vw,94px); max-width:11ch; font-weight:500;
+    perspective:900px; opacity:0;
+  }
+  .hero h1.split-ready{ opacity:1; }
+  .hero h1 .ch{ display:inline-block; opacity:0; transform:translateY(70px) rotateX(55deg); transform-origin:50% 100%; }
+  .hero h1 em{
+    font-style:normal; color:var(--accent);
+    text-shadow:0 0 14px rgba(200,135,63,.4), 0 0 40px rgba(200,135,63,.18);
+    animation:emPulse 5s ease-in-out infinite;
+  }
+  @keyframes emPulse{
+    0%,100%{ text-shadow:0 0 10px rgba(200,135,63,.28), 0 0 30px rgba(200,135,63,.10); }
+    50%{ text-shadow:0 0 14px rgba(200,135,63,.4), 0 0 40px rgba(200,135,63,.16); }
+  }
+  .hero .lede{
+    margin-top:26px; max-width:38ch; font-size:18px; color:#cfcac0; opacity:0;
+  }
+  .hero .brand-line{
+    display:flex; align-items:center; gap:14px; margin-bottom:26px; opacity:0;
+  }
+  .hero .brand-line .rule{
+    width:44px; height:1px; background:linear-gradient(90deg, transparent, var(--accent));
+    box-shadow:0 0 10px rgba(200,135,63,.8);
+  }
+  .hero .brand-line span{ font-size:12.5px; letter-spacing:.22em; color:#cfcac0; text-transform:uppercase; }
+  .cta-row{ display:flex; gap:16px; margin-top:44px; flex-wrap:wrap; opacity:0; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:16px 30px; font-size:14px;
+    letter-spacing:.02em; border:1px solid var(--accent); border-radius:2px;
+    transition:background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .btn.solid{
+    background:var(--accent); color:#0a0a0a; font-weight:600; border-color:var(--accent);
+    box-shadow:0 0 0 rgba(200,135,63,0);
+  }
+  .btn.solid:hover{
+    background:transparent; color:var(--accent); transform:translateY(-2px);
+    box-shadow:0 0 16px rgba(200,135,63,.22);
+  }
+  .btn.outline{ color:#fff; border-color:rgba(255,255,255,.35); }
+  .btn.outline:hover{
+    background:#fff; color:var(--ink); transform:translateY(-2px);
+    box-shadow:0 0 28px rgba(255,255,255,.25);
+  }
+  .hero-art{ position:relative; z-index:3; opacity:0; }
+  .hero-art svg{
+    width:100%; height:auto; max-width:430px; margin:0 auto; display:block;
+    filter:drop-shadow(0 0 14px rgba(200,135,63,.25));
+  }
+  .hero-art svg circle{ filter:drop-shadow(0 0 8px rgba(200,135,63,.35)); }
+  .hero-art svg > path{
+    animation:steam 3.6s ease-in-out infinite; opacity:.9;
+  }
+  .hero-art svg > path:nth-of-type(2){ animation-delay:1.2s; }
+  .hero-art svg > path:nth-of-type(3){ animation-delay:2.3s; }
+  @keyframes steam{
+    0%{ transform:translateY(6px); opacity:0; }
+    35%{ opacity:.95; }
+    100%{ transform:translateY(-14px); opacity:0; }
+  }
+  .scroll-hint{
+    position:absolute; left:50%; bottom:132px; transform:translateX(-50%); z-index:4;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:#8f8b82; opacity:0;
+  }
+  .scroll-hint .wheel{
+    width:1px; height:44px; background:rgba(255,255,255,.15); position:relative; overflow:hidden;
+  }
+  .scroll-hint .wheel::after{
+    content:""; position:absolute; left:0; top:-40%; width:100%; height:40%;
+    background:linear-gradient(to bottom, transparent, var(--accent));
+    animation:scrollBeam 1.8s var(--ease) infinite;
+  }
+  @keyframes scrollBeam{ to{ top:110%; } }
+  @media(max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-art{ order:-1; max-width:180px; margin:0 auto 10px; }
+    .scroll-hint{ display:none; }
+  }
+
+  /* ---------- glow scroll progress ---------- */
+  #scroll-progress{
+    position:fixed; top:0; left:0; height:2px; width:0; z-index:300;
+    background:linear-gradient(90deg, var(--accent-dark), var(--accent), #ffd9a0);
+    box-shadow:0 0 8px rgba(200,135,63,.55), 0 0 20px rgba(200,135,63,.25);
+    pointer-events:none;
+  }
+
+  /* ---------- section heading glow on reveal ---------- */
+  .reveal h2{ transition:text-shadow 1.2s ease; }
+  .reveal.in h2{ text-shadow:0 0 34px rgba(200,135,63,.22); }
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    background:var(--ink); border-top:1px solid var(--hair-dark);
+    overflow:hidden; padding:22px 0; position:relative; z-index:2;
+  }
+  .marquee-track{ display:flex; gap:70px; white-space:nowrap; animation:scroll 30s linear infinite; width:max-content;}
+  .marquee-track span{ font-family:'Fraunces',serif; font-size:15px; letter-spacing:.12em; color:#8f8b82; text-transform:uppercase;}
+  .marquee-track span i{ color:var(--accent); margin-right:70px; font-size:6px; vertical-align:middle;}
+  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ---------- Section titles ---------- */
+  .section-head{ margin-bottom:60px; }
+  .section-head h2{ font-size:clamp(32px,4.2vw,50px); }
+  .section-head p{ color:var(--mute); margin-top:10px; font-size:16px;}
+  .section-head.center{ text-align:center; max-width:560px; margin-left:auto; margin-right:auto;}
+
+  /* ---------- Brands : Floating Card Collage ---------- */
+  .brands{ background:var(--paper); min-height:125vh; padding:0; position:relative; overflow:hidden; perspective:1400px; }
+  .brands::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(600px 400px at 16% 20%, rgba(200,135,63,.10), transparent 65%),
+      radial-gradient(700px 500px at 84% 80%, rgba(200,135,63,.08), transparent 65%);
+  }
+  .collage-stage{
+    position:relative; max-width:1280px; margin:0 auto;
+    height:125vh; min-height:880px; transform-style:preserve-3d;
+  }
+  .brand-card{
+    position:absolute; background:rgba(255,255,255,.92); border:1px solid rgba(255,255,255,.7);
+    border-radius:26px; padding: 20px; display:flex; align-items:center; justify-content:center;
+    box-shadow:
+      0 2px 4px rgba(10,10,10,.04),
+      0 10px 22px rgba(10,10,10,.08),
+      0 28px 56px rgba(10,10,10,.12),
+      0 48px 90px rgba(10,10,10,.10);
+    will-change:transform, opacity; opacity:0;
+    backface-visibility:hidden;
+    transition:box-shadow .45s var(--ease), border-color .45s var(--ease), filter .45s var(--ease);
+  }
+  @media (hover:hover){
+    .brand-card:hover{
+      border-color:rgba(200,135,63,.45);
+      filter:brightness(1.03);
+      box-shadow:
+        0 4px 8px rgba(10,10,10,.05),
+        0 18px 36px rgba(10,10,10,.12),   
+        0 44px 80px rgba(10,10,10,.18),
+        0 0 44px rgba(200,135,63,.16);
+    }
+  }
+  .brand-card::after{
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:linear-gradient(135deg, rgba(255,255,255,.55), transparent 45%);
+  }
+  .card-tilt{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; transform-style:preserve-3d; }
+  .card-float{ width:100%; display:flex; align-items:center; justify-content:center; }
+  .brand-card img{
+    width:100%; height:100%; max-height:150px; object-fit:contain; border-radius: 20px;
+    filter:saturate(1.02); position:relative; z-index:1;
+  }
+  .brand-fallback{
+    width:100%; min-height:90px; display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces',serif; font-weight:600; letter-spacing:.04em; color:var(--ink);
+    position:relative; z-index:1; text-align:center; line-height:1.2;
+  }
+  /* mobile: natural-flow collage, scroll-driven rise */
+  @media(max-width:767px){
+    .brands{ min-height:0; padding:84px 0 60px; }
+    .collage-stage{ height:auto; min-height:0; display:grid; grid-template-columns:1fr 1fr; gap:28px 16px; padding:0 22px; perspective:none; }
+    .brand-card{ position:relative; left:auto !important; top:auto !important; width:100% !important; padding:26px 18px; min-height:132px; }
+    .brand-card:nth-child(even){ margin-top:34px; }
+    .brand-card:nth-child(odd):not(:first-child){ margin-top:-6px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .brand-card{ opacity:1 !important; transform:none !important; }
+  }
+
+  /* ---------- About ---------- */
+  .about{ background:var(--ink); color:#fff; }
+  .about-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:start;}
+  .about p{ color:#d8d4ca; margin-bottom:18px; max-width:50ch; font-size:16.5px;}
+  .about .stats{ display:flex; gap:50px; margin-top:44px; flex-wrap:wrap;}
+  .about .stat b{ font-family:'Fraunces',serif; font-size:42px; display:block; font-weight:500; color:var(--accent);}
+  .about .stat span{ font-size:12.5px; color:#a9a49a; letter-spacing:.05em; text-transform:uppercase;}
+  @media(max-width:800px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Owner ---------- */
+  .owner{ background:var(--paper); }
+  .owner-grid{ display:grid; grid-template-columns:.55fr 1.45fr; gap:60px; align-items:center;}
+  .owner-photo{
+    width:100%; aspect-ratio:1/1; border-radius:50%; border:2px dashed var(--accent);
+    position:relative; overflow:hidden;
+    background:var(--accent-soft); text-align:center; max-width:280px; margin:0 auto;
+  }
+  .owner-photo img{
+    width:100%; height:100%; object-fit:cover; display:block; border-radius:50%;
+  }
+  .owner-photo-fallback{
+    position:absolute; inset:0; display:none; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px; color:var(--accent-dark); padding:20px;
+  }
+  .owner-photo-fallback i{ font-size:44px; }
+  .owner-photo-fallback span{ font-size:12.5px; letter-spacing:.03em; max-width:16ch; }
+  .owner-quote{ font-family:'Fraunces',serif; font-size:22px; font-weight:400; color:var(--ink); max-width:52ch; position:relative; padding-left:26px; border-left:2px solid var(--accent);}
+  .owner-name{ margin-top:22px; font-size:14px; letter-spacing:.03em; }
+  .owner-name b{ display:block; font-family:'Fraunces',serif; font-size:17px; font-weight:600; }
+  .owner-name span{ color:var(--mute); font-size:13px; }
+  @media(max-width:800px){ .owner-grid{grid-template-columns:1fr; text-align:center;} .owner-quote{padding-left:0; border-left:0; border-top:2px solid var(--accent); padding-top:22px; margin:0 auto;} }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials{ background:var(--ink); color:#fff; }
+  .t-slider{ max-width:700px; margin:0 auto; text-align:center; position:relative;}
+  .t-slide{ display:none; }
+  .t-slide.active{ display:block; animation:fade .6s var(--ease); }
+  @keyframes fade{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+  .t-slide p{ font-size:22px; font-family:'Fraunces',serif; font-weight:400; color:#fff; max-width:38ch; margin:0 auto 22px;}
+  .t-slide .who{ font-size:13px; color:var(--accent); letter-spacing:.05em; text-transform:uppercase;}
+  .t-controls{ display:flex; justify-content:center; gap:18px; margin-top:40px; align-items:center;}
+  .t-controls button{ width:40px; height:40px; border:1px solid var(--hair-dark); background:none; color:#fff; border-radius:50%; cursor:pointer; font-size:14px; transition:background .3s ease, color .3s ease;}
+  .t-controls button:hover{ background:var(--accent); border-color:var(--accent); color:#0a0a0a;}
+  .t-dots{ display:flex; gap:8px;}
+  .t-dots span{ width:6px; height:6px; border-radius:50%; background:var(--hair-dark); display:block; cursor:pointer; transition:background .3s ease;}
+  .t-dots span.active{ background:var(--accent); }
+  .google-cta{ text-align:center; margin-top:50px; }
+  .google-cta a{
+    display:inline-flex; align-items:center; gap:10px; border:1px solid var(--hair-dark); padding:13px 24px;
+    border-radius:2px; font-size:13.5px; color:#fff; transition:background .3s ease, border-color .3s ease;
+  }
+  .google-cta a:hover{ background:#fff; color:var(--ink); border-color:#fff; }
+  .google-cta i{ color:#4285F4; }
+  .google-cta a:hover i{ color:#4285F4; }
+
+  /* ---------- Contact ---------- */
+  .contact{ background:var(--paper); }
+  .contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:0; background:#fff; color:var(--ink); border:1px solid var(--hair);}
+  .contact-info{ padding:54px 46px; background:var(--ink); color:#fff; }
+  .contact-info h3{ font-size:27px; margin-bottom:16px;}
+  .contact-info p{ color:#cfcac0; margin-bottom:32px; max-width:32ch; font-size:15.5px;}
+  .info-row{ display:flex; align-items:center; gap:14px; margin-bottom:18px; font-size:15px;}
+  .info-row i{ width:20px; text-align:center; color:var(--accent);}
+  .wa-inline{
+    margin-top:30px; display:inline-flex; align-items:center; gap:10px;
+    border:1px solid var(--accent); padding:14px 24px; border-radius:2px; font-size:13.5px; color:var(--accent);
+    transition:background .3s ease, color .3s ease, transform .3s ease;
+  }
+  .wa-inline:hover{ background:var(--accent); color:#0a0a0a; transform:translateY(-2px);}
+  .contact-form{ padding:54px 46px; }
+  .field{ margin-bottom:22px; }
+  .field label{ display:block; font-size:12.5px; color:var(--mute); margin-bottom:8px; letter-spacing:.04em; text-transform:uppercase;}
+  .field input, .field textarea{
+    width:100%; border:none; border-bottom:1px solid var(--hair);
+    background:transparent; padding:10px 2px; font-size:16px; font-family:inherit; color:var(--ink);
+    transition:border-color .3s ease;
+  }
+  .field input:focus, .field textarea:focus{ outline:none; border-color:var(--accent);}
+  .field textarea{ resize:vertical; min-height:90px;}
+  .submit-row{ display:flex; align-items:center; gap:18px; margin-top:30px; flex-wrap:wrap;}
+  .submit-row button{
+    background:var(--ink); color:#fff; border:1px solid var(--ink); padding:15px 32px;
+    border-radius:2px; font-size:14px; letter-spacing:.02em; cursor:pointer; font-family:inherit;
+    transition:background .3s ease, color .3s ease, transform .3s ease;
+  }
+  .submit-row button:hover{ background:var(--accent); border-color:var(--accent); color:#0a0a0a; transform:translateY(-2px);}
+  .form-note{ font-size:12.5px; color:var(--mute);}
+  @media(max-width:860px){ .contact-grid{grid-template-columns:1fr;} .contact-info, .contact-form{padding:42px 28px;} }
+
+  /* ---------- Map ---------- */
+  .map-section{ background:var(--paper); }
+  .map-frame{ border:1px solid var(--hair); filter:grayscale(.4) contrast(1.05); }
+  .map-frame iframe{ width:100%; height:420px; border:0; display:block;}
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--ink); color:#fff; padding:74px 0 26px; }
+  .foot-grid{ display:grid; grid-template-columns:1.2fr .8fr .8fr; gap:50px; margin-bottom:58px;}
+  .foot-grid h4{ font-size:13px; letter-spacing:.06em; color:var(--accent); margin-bottom:20px; font-weight:600; text-transform:uppercase;}
+  .foot-grid ul{ list-style:none; }
+  .foot-grid li{ margin-bottom:12px; }
+  .foot-grid a{ color:#e7e3da; font-size:14.5px;}
+  .foot-grid a:hover{ color:#fff; text-decoration:underline; }
+  .foot-brand p{ color:#a9a49a; margin-top:14px; max-width:30ch; font-size:14.5px;}
+  .foot-social{ display:flex; gap:16px; margin-top:22px;}
+  .foot-social a{ width:36px; height:36px; border:1px solid var(--hair-dark); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background .3s ease, color .3s ease;}
+  .foot-social a:hover{ background:var(--accent); color:var(--ink); border-color:var(--accent);}
+  .newsletter{ display:flex; margin-top:6px; border-bottom:1px solid var(--hair-dark);}
+  .newsletter input{ flex:1; background:none; border:0; color:#fff; padding:10px 2px; font-family:inherit;}
+  .newsletter input:focus{ outline:none; }
+  .newsletter button{ background:none; border:0; color:var(--accent); font-size:13.5px; cursor:pointer; letter-spacing:.02em;}
+  .bottom-bar{
+    border-top:1px solid var(--hair-dark); padding-top:24px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:12.5px; color:#8f8b82;
+  }
+  @media(max-width:760px){ .foot-grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* ---------- WhatsApp float ---------- */
+  .wa-float{
+    position:fixed; right:22px; bottom:22px; z-index:200;
+    width:58px; height:58px; border-radius:50%;
+    background:#fff; color:var(--ink); border:1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center; font-size:26px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    transition:transform .25s var(--ease), background .25s ease, color .25s ease;
+    animation:pop .6s .2s var(--ease) both;
+  }
+  .wa-float:hover{ background:#25D366; color:#fff; border-color:#25D366; transform:translateY(-3px) scale(1.05);}
+  @keyframes pop{ from{ transform:scale(0); opacity:0;} to{ transform:scale(1); opacity:1;} }
+</style>
+
+</head>
+<body class="locked">
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path id="pan-body" d="M60,95 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"/>
+    <path id="pan-handle" d="M138,88 L178,72"/>
+  </svg>
+</div>
+
+<!-- ================= HEADER ================= -->
+<div id="scroll-progress"></div>
+<header id="site-header">
+  <a href="#top" class="logo">NAJMI <span>KITCHENWARE</span></a>
+  <nav class="primary-nav" id="primary-nav">
+    <ul>
+      <li><a href="#top" class="nav-link">Home</a></li>
+      <li><a href="#brands" class="nav-link">Brands</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#owner" class="nav-link">Owner</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-glow hero-glow-a"></div>
+  <div class="hero-glow hero-glow-b"></div>
+  <canvas id="hero-grid"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="brand-line"><span class="rule"></span><span>Bharuch, Gujarat</span></div>
+      <h1 id="hero-title">Kitchenware,<br><em>Refined.</em></h1>
+      <p class="lede" id="hero-lede">Curated cookware and kitchen essentials from 11+ of India's most trusted names.</p>
+      <div class="cta-row" id="hero-cta">
+        <a href="https://wa.me/919998246752?text=Hi%2C%20I%27d%20like%20some%20information." target="_blank" class="btn solid"><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a>
+        <a href="#brands" class="btn outline">Explore Brands</a>
       </div>
-      <!-- about sectuion end -->
-      <!-- projects section start -->
-       <!--<div class="projects_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="projects_taital">Products </h1>
-                  <div class="nav-tabs-navigation">
-                     <div class="nav-tabs-wrapper">
-                       
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="projects_section_2 layout_padding">
-            <div class="container">
-               <div class="pets_section">
-                  <div class="pets_section_2">
-                     <div id="main_slider" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                           <div class="carousel-item active">
-                              <div class="row">
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/borrosil1.jpeg"" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/futura1.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/mitlon.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                        <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="row">
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/futura2.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/mitlon1.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/borrosil2.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="row">
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/mitlon3.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/futura3.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/mitlon5.jpeg" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div> 
-      </div>-->
-      <!-- projects section end -->
-      <!-- testimonial section start -->
-      <div class="testimonial_section layout_padding" id="testimonial">
-         <div class="container">
-            <div id="costum_slider" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="testimonial_taital">Testimonial</h1>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text">Rubina Kazi <span style="float: right;"><img src="images/quick-icon.png"></span></h2>
-                              <p class="textimonial_text">I recently purchased a set of pots and pans from them, and I am thrilled with the quality! The items are durable, stylish, and make cooking a breeze. The customer service was excellent, and my order arrived quickly. I highly recommend Them for anyone looking to upgrade their kitchen essentials.</p>
-                          </div>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text"><img src="images/quick-icon.png"> <span style="float: right;">Fatima Ravat</span></h2>
-                              <p class="textimonial_text">Visiting Najmi Kitchenware was a delightful experience. I found a beautiful set of mixing bowls that are not only functional but also add a touch of elegance to my kitchen. The staff was very friendly and provided excellent recommendations. I will definitely be coming back for more kitchen supplies.</p>
-                          </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="testimonial_taital">Testimonial</h1>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text">Patel Shenaz<span style="float: right;"><img src="images/quick-icon.png"></span></h2>
-                              <p class="textimonial_text">I bought some baking tools from them, and I couldn't be happier. The products are high-quality and exactly as described. The store was well-organized, and the checkout process was smooth. Great experience overall!</p>
-                          </div>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text"><img src="images/quick-icon.png"> <span style="float: right;">Nitin Berawala   </span></h2>
-                              <p class="textimonial_text">The blender I purchased from Najmi kitchenware is fantastic! It's powerful, easy to use, and has become a staple in my kitchen. The prices are reasonable, and the staff helped me find exactly what I needed. I'm very satisfied with my purchase and will definitely shop here again.</p>
-                          </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="testimonial_taital">Testimonial</h1>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text">Mohammed Shafik <span style="float: right;"><img src="images/quick-icon.png"></span></h2>
-                              <p class="textimonial_text">My new chef's knife from Najmi has completely changed my cooking experience. It's sharp, well-balanced, and feels great in my hand. The customer service team was very knowledgeable and answered all my questions. I'll be recommending this store to all my friends!</p>
-                          </div>
-                          <div class="testimonial_section_2">
-                              <h2 class="client_name_text"><img src="images/quick-icon.png"> <span style="float: right;">Abdul Khan</span></h2>
-                              <p class="textimonial_text">I recently bought a set of high-quality utensils from Najmi Kitchenware , and they have made cooking so much easier. The store has a wide variety of products, and everything is well-displayed. The staff was knowledgeable and guided me to the best choices for my needs. Highly recommend this store for all your kitchenware needs!</p>
-                          </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
-                 <i class="fa fa-angle-left"></i>
-               </a>
-               <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
-                 <i class="fa fa-angle-right"></i>
-               </a>
-            </div>
-         </div>
+    </div>
+    <div class="hero-art" id="hero-art">
+      <svg viewBox="0 0 400 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="240" r="115" stroke="#ffffff" stroke-width="2.5"/>
+        <circle cx="190" cy="240" r="95" stroke="var(--accent)" stroke-opacity=".5" stroke-width="1.5"/>
+        <rect x="292" y="222" width="98" height="15" rx="7.5" transform="rotate(-10 292 222)" fill="#ffffff"/>
+        <path d="M150 95 C142 75 158 68 152 48" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        <path d="M190 95 C182 75 198 68 192 48" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M230 95 C222 75 238 68 232 48" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="60" cy="340" r="3" fill="var(--accent)"/>
+        <circle cx="80" cy="360" r="3" fill="#ffffff" fill-opacity=".5"/>
+        <line x1="30" y1="380" x2="350" y2="380" stroke="#ffffff" stroke-opacity=".15"/>
+      </svg>
+    </div>
+  </div>
+  <div class="scroll-hint" id="scroll-hint"><span></span><span class="wheel"></span></div>
+  <div class="marquee">
+    <div class="marquee-track">
+<span><i class="fa-solid fa-circle"></i>Hawkins</span><span><i class="fa-solid fa-circle"></i>Futura</span><span><i class="fa-solid fa-circle"></i>Stahl</span><span><i class="fa-solid fa-circle"></i>Milton</span><span><i class="fa-solid fa-circle"></i>Borosil</span><span><i class="fa-solid fa-circle"></i>Bajaj</span><span><i class="fa-solid fa-circle"></i>Maharaja Whiteline</span><span><i class="fa-solid fa-circle"></i>Boss</span><span><i class="fa-solid fa-circle"></i>Panasonic</span><span><i class="fa-solid fa-circle"></i>Bergner</span><span><i class="fa-solid fa-circle"></i>Bonton</span><span><i class="fa-solid fa-circle"></i>Tibros</span><span><i class="fa-solid fa-circle"></i>Arizy</span><span><i class="fa-solid fa-circle"></i>Hawkins</span><span><i class="fa-solid fa-circle"></i>Futura</span><span><i class="fa-solid fa-circle"></i>Prestige</span><span><i class="fa-solid fa-circle"></i>Milton</span><span><i class="fa-solid fa-circle"></i>Borosil</span><span><i class="fa-solid fa-circle"></i>Bajaj</span><span><i class="fa-solid fa-circle"></i>Maharaja Whiteline</span><span><i class="fa-solid fa-circle"></i>Boss</span><span><i class="fa-solid fa-circle"></i>Vinod</span><span><i class="fa-solid fa-circle"></i>Bergner</span><span><i class="fa-solid fa-circle"></i>Bonton</span><span><i class="fa-solid fa-circle"></i>Tibros</span><span><i class="fa-solid fa-circle"></i>Arizy</span>
+    </div>
+  </div>
+</section>
+<!-- ================= BRANDS : FLOATING CARD COLLAGE ================= -->
+<section class="brands" id="brands">
+  <div class="collage-stage" id="collage-stage"></div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">About Us</div>
+      <h2>Quality.<br>Trust. Craft.</h2>
+    </div>
+    <div class="reveal">
+      <p>Every piece at Najmi Kitchenware tells a story of craftsmanship. Rooted in the heart of Bharuch, we've furnished homes and hotel kitchens for years.</p>
+      <p>Good cooking starts with the right tools — so we bring you India's most trusted brands, all under one roof, at honest prices.</p>
+      <div class="stats">
+        <div class="stat"><b>11+</b><span>Leading Brands</span></div>
+        <div class="stat"><b>1000+</b><span>Happy Customers</span></div>
+        <div class="stat"><b>Est.</b><span>In Bharuch</span></div>
       </div>
-      <!-- testimonial section end -->
-      <!-- contact section start -->
-      <div class="contact_section layout_padding" id="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="contact_taital">Contact Us</h1>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid">
-            <div class="contact_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <form action="">
-                        <div class="mail_section_1">
-                           <input type="text" class="mail_text" placeholder="Name" name="Name">
-                           <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number"> 
-                           <input type="text" class="mail_text" placeholder="Email" name="Email">
-                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                           <div class="send_bt"><a href="#">SEND</a></div>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col-md-6" style="padding-left: 80px;">
-                     <div class="contact_img"><img src="images/contact-img.png"></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="map_main">
-            <div class="map-responsive"  >
-                  <iframe id="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=NAJMI KITCHENWARE+d-127,Katopore+Darwaza+Bharuch+Gujarat" width="600" height="600" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-               </div>
-         </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OWNER ================= -->
+<section class="owner" id="owner">
+  <div class="wrap owner-grid reveal">
+    <div class="owner-photo">
+      <!-- 👇 Just replace this src with your photo's filename/link — that's it -->
+      <img src="images/logo.png" alt="Owner of Najmi Kitchenware"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="owner-photo-fallback">
+        <i class="fa-solid fa-user"></i>
+        <span>Owner photo goes here</span>
       </div>
-      <!-- contact section end -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="location_text">
-                     <ul>
-                        <li>
-                           <a href="#"><span class="padding_15"><i class="fa fa-mobile" aria-hidden="true"></i></span> <br>Call +91-9998246752</a>
-                        </li>
-                        <li class="active">
-                           <a href="#"><span class="padding_15"><i class="fa fa-envelope" aria-hidden="true"></i></span> <br>najmikicthenware@gmail.com</a>
-                        </li>
-                    
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="footer_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <h2 class="useful_text">QUICK LINKS</h2>
-                     <div class="footer_menu">
-                        <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="#about_section">About</a></li>
-                           <li><a href="#brands">Brands</a></li>
-                           
-                           <li><a href="#testimonial">Testimonial</a></li>
-                        
-                           <li><a href="#contact">Contact Us</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                
-                  <div class="col-md-6">
-                     <h2 class="useful_text">SIGN UP TO GET NEW OFFERS UPDATE</h2>
-                     <div class="form-group">
-                        <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comment" name="Enter Your Email"></textarea>
-                        <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li>
-                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                  </li>
-               </ul>
-            </div>
-         </div>
+    </div>
+    <div>
+      <div class="eyebrow">A Word From the Owner</div>
+      <p class="owner-quote">"At Najmi Kitchenware, every product on our shelves is something I'd trust in my own kitchen. Our goal has always been simple — honest quality and real advice for every customer who walks through our doors. Thank you for being part of our story."</p>
+      <div class="owner-name"><b>Hussain Kachwala</b><span>Owner, Najmi Kitchenware</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Reviews</div>
+      <h2>What People Say</h2>
+    </div>
+    <div class="t-slider">
+      <div class="t-slide active">
+        <p>"Outstanding quality. The team helped me pick exactly what I needed."</p>
+        <div class="who">Rubina Kazi</div>
       </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <p class="copyright_text">2024 All Rights Reserved. Design by <a href="https://www.linkedin.com/in/juzar-kagdi-517b64231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ">Juzar Kagdi</a></p>
-               </div>
-            </div>
-         </div>
+      <div class="t-slide">
+        <p>"My chef's knife changed the way I cook. Sharp, balanced, perfect."</p>
+        <div class="who">Mohammed Shafik</div>
       </div>
-      <!-- copyright section end -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-   </body>
+      <div class="t-slide">
+        <p>"Beautiful, durable mixing bowls. Everything is displayed so well."</p>
+        <div class="who">Fatima Ravat</div>
+      </div>
+      <div class="t-slide">
+        <p>"Powerful blender, fair prices, and genuinely helpful staff."</p>
+        <div class="who">Nitin Berawala</div>
+      </div>
+      <div class="t-slide">
+        <p>"Wide variety of utensils, well displayed, and the staff guided me to the best choice."</p>
+        <div class="who">Abdul Khan</div>
+      </div>
+      <div class="t-controls">
+        <button id="t-prev" aria-label="Previous">‹</button>
+        <div class="t-dots" id="t-dots"></div>
+        <button id="t-next" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="google-cta">
+      <a href="https://www.google.com/maps/search/?api=1&query=Najmi+Kitchenware+Bharuch" target="_blank"><i class="fa-brands fa-google"></i> Read more reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="eyebrow" style="color:var(--accent);">Contact</div>
+        <h3>Let's Talk</h3>
+        <p>Tell us what you need — we'll help you find the right fit.</p>
+        <div class="info-row"><i class="fa-solid fa-phone"></i> +91 99982 46752</div>
+        <div class="info-row"><i class="fa-solid fa-envelope"></i> najmikicthenware@gmail.com</div>
+        <div class="info-row"><i class="fa-solid fa-location-dot"></i> D-127, Katopore Darwaza, Bharuch</div>
+        <a href="https://wa.me/919998246752" target="_blank" class="wa-inline"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Your full name">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" required placeholder="10-digit mobile number">
+          </div>
+          <div class="field">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" required placeholder="What are you looking for?"></textarea>
+          </div>
+          <div class="submit-row">
+            <button type="submit">Send</button>
+            <span class="form-note">Sent directly to us on WhatsApp.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="map-section">
+  <div class="wrap reveal">
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=NAJMI+KITCHENWARE+d-127,Katopore+Darwaza+Bharuch+Gujarat" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="logo" style="font-size:20px;">NAJMI</span>
+        <p>Bharuch's trusted kitchenware showroom — the right tools for every kitchen.</p>
+        <div class="foot-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/919998246752" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#owner">Owner</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Updates</h4>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>© 2026 Najmi Kitchenware. All rights reserved.</span>
+      <span>Design by <a href="https://www.linkedin.com/in/juzar-kagdi-517b64231" target="_blank" style="text-decoration:underline;">Juzar Kagdi</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a class="wa-float" href="https://wa.me/919998246752?text=Hi%2C%20I%27d%20like%20some%20information." target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+
+  const reducedMotionGlobal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ================= HERO : animated light-grid canvas =================
+  (function(){
+    const canvas = document.getElementById('hero-grid');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const ACCENT = '200,135,63';
+    const WHITE  = '255,255,255';
+    let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let vPulses = [], hPulses = [], visible = true, scrollBoost = 0, lastY = window.scrollY;
+
+    function resize(){
+      W = canvas.offsetWidth; H = canvas.offsetHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      build();
+    }
+
+    function build(){
+      const gap = Math.max(90, W / 14);
+      vPulses = [];
+      const nV = Math.ceil(W / gap) + 1;
+      for(let i = 0; i <= nV; i++){
+        vPulses.push({
+          x: i * gap + (i % 2 ? gap * .4 : 0),
+          y: Math.random() * H,
+          speed: .35 + Math.random() * .75,
+          len: 60 + Math.random() * 90,
+          accent: Math.random() < .18
+        });
+      }
+      hPulses = [];
+      const rows = 6;
+      for(let j = 0; j < rows; j++){
+        const y = (H / (rows + 1)) * (j + 1);
+        hPulses.push({
+          x: Math.random() * W, y,
+          vx: (j % 2 ? 1 : -1) * (.25 + Math.random() * .5),
+          accent: j % 4 === 0
+        });
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      const dy = Math.abs(window.scrollY - lastY);
+      lastY = window.scrollY;
+      scrollBoost = Math.min(6, scrollBoost + dy / 60);
+    }, { passive:true });
+
+    new IntersectionObserver(e => { visible = e[0].isIntersecting; }, { threshold: 0 })
+      .observe(document.querySelector('.hero'));
+
+    function drawLinePulse(x, y, horizontal, len, rgb, boost){
+      const g = horizontal
+        ? ctx.createLinearGradient(x - len, y, x + len, y)
+        : ctx.createLinearGradient(x, y - len, x, y + len);
+      g.addColorStop(0, 'rgba(' + rgb + ',0)');
+      g.addColorStop(.5, 'rgba(' + rgb + ',' + (0.55 + boost * .04) + ')');
+      g.addColorStop(1, 'rgba(' + rgb + ',0)');
+      ctx.strokeStyle = g;
+      ctx.lineWidth = 1.4;
+      ctx.shadowColor = 'rgba(' + rgb + ',.7)';
+      ctx.shadowBlur = 10 + boost * 2;
+      ctx.beginPath();
+      if(horizontal){ ctx.moveTo(x - len, y); ctx.lineTo(x + len, y); }
+      else { ctx.moveTo(x, y - len); ctx.lineTo(x, y + len); }
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+
+    function frame(){
+      requestAnimationFrame(frame);
+      if(!visible || reducedMotionGlobal) return;
+      ctx.clearRect(0, 0, W, H);
+      const boost = scrollBoost;
+      scrollBoost *= .93;
+
+      // vertical grid lines
+      ctx.strokeStyle = 'rgba(255,255,255,.03)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      vPulses.forEach(p => { ctx.moveTo(p.x, 0); ctx.lineTo(p.x, H); });
+      ctx.stroke();
+
+      // horizontal drifting lines
+      ctx.strokeStyle = 'rgba(255,255,255,.02)';
+      ctx.beginPath();
+      hPulses.forEach(p => {
+        p.x += p.vx * (1 + boost * .4);
+        if(p.x < -120) p.x = W + 120;
+        if(p.x > W + 120) p.x = -120;
+        ctx.moveTo(0, p.y); ctx.lineTo(W, p.y);
+      });
+      ctx.stroke();
+
+      // glowing pulses travelling along vertical lines
+      vPulses.forEach(p => {
+        p.y += p.speed * (1 + boost);
+        if(p.y - p.len > H) p.y = -p.len;
+        drawLinePulse(p.x, p.y, false, p.len, p.accent ? ACCENT : WHITE, boost);
+      });
+
+      // glowing pulses travelling along horizontal lines
+      hPulses.forEach(p => {
+        drawLinePulse(p.x, p.y, true, 110, p.accent ? ACCENT : WHITE, boost);
+      });
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    frame();
+  })();
+
+  // ================= HERO : cinematic entrance (anime.js) =================
+  function heroIntro(){
+    if (heroIntro._done) return;
+    heroIntro._done = true;
+    const title = document.getElementById('hero-title');
+    if(!title) return;
+    // split headline into chars (keep <br> and <em> structure)
+    const split = (node) => {
+      [...node.childNodes].forEach(child => {
+        if(child.nodeType === 3){
+          const frag = document.createDocumentFragment();
+          child.textContent.split('').forEach(ch => {
+            if(ch === ' '){ frag.appendChild(document.createTextNode(' ')); return; }
+            const s = document.createElement('span');
+            s.className = 'ch'; s.textContent = ch;
+            frag.appendChild(s);
+          });
+          node.replaceChild(frag, child);
+        } else if(child.tagName !== 'BR'){ split(child); }
+      });
+    };
+    split(title);
+    title.classList.add('split-ready');
+    const chars = title.querySelectorAll('.ch');
+    try {
+      const tl = anime.timeline({ easing:'easeOutExpo' });
+      tl.add({ targets:'.brand-line', opacity:[0,1], translateX:[-24,0], duration:800 }, 0)
+        .add({ targets:chars, opacity:[0,1], translateY:[70,0], rotateX:[55,0], duration:1100, delay:anime.stagger(34) }, 150)
+        .add({ targets:'#hero-lede', opacity:[0,1], translateY:[22,0], duration:900 }, '-=700')
+        .add({ targets:'#hero-cta', opacity:[0,1], translateY:[22,0], duration:900 }, '-=650')
+        .add({ targets:'#hero-art', opacity:[0,1], scale:[.92,1], duration:1200, easing:'easeOutCubic' }, '-=900')
+        .add({ targets:'#scroll-hint', opacity:[0,.85], duration:800 }, '-=400');
+      // gentle float loop on the art
+      if(!reducedMotionGlobal){
+        anime({ targets:'#hero-art svg', translateY:[-8,8], duration:3400, direction:'alternate', loop:true, easing:'easeInOutSine' });
+      }
+    } catch (err) {
+      // fallback if anime.js didn't load — still reveal everything cleanly
+      [chars, ['.brand-line','#hero-lede','#hero-cta','#hero-art','#scroll-hint'].map(s=>document.querySelector(s))].flat()
+        .forEach(el => { if (el) { el.style.opacity = '1'; el.style.transform = 'none'; } });
+    }
+  }
+
+  // glow scroll progress bar
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    progressBar.style.width = (p * 100) + '%';
+  }, { passive:true });
+
+  // ---------- preloader: draw frypan with anime.js, then blur-fade out ----------
+  window.addEventListener('load', () => {
+    const body = document.querySelector('#pan-body');
+    const handle = document.querySelector('#pan-handle');
+    const preloader = document.getElementById('preloader');
+
+    [body, handle].forEach(p => {
+      const len = p.getTotalLength();
+      p.style.strokeDasharray = len;
+      p.style.strokeDashoffset = len;
+    });
+
+    const tl = anime.timeline({ easing: 'easeInOutSine' });
+    tl.add({
+      targets: '#pan-body',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      duration: 900
+    }).add({
+      targets: '#pan-handle',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      duration: 350
+    }, '-=250')
+    .add({
+      targets: preloader,
+      opacity: [1, 0],
+      duration: 650,
+      easing: 'easeOutQuad',
+      begin: () => { preloader.style.filter = 'blur(0px)'; preloader.style.transition = 'filter .65s ease'; requestAnimationFrame(()=>{ preloader.style.filter='blur(18px)'; }); },
+      complete: () => {
+        preloader.style.display = 'none';
+        document.body.classList.remove('locked');
+        heroIntro();
+      }
+    }, '+=150');
+  });
+
+  // failsafe: never trap user if load event is delayed
+  setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    if (preloader && preloader.style.display !== 'none') {
+      preloader.style.display = 'none';
+      document.body.classList.remove('locked');
+      heroIntro();
+    }
+  }, 3500);
+
+  // header scroll state
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const primaryNav = document.getElementById('primary-nav');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    primaryNav.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('open');
+      primaryNav.classList.remove('open');
+    });
+  });
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // testimonial slider
+  const slides = document.querySelectorAll('.t-slide');
+  const dotsWrap = document.getElementById('t-dots');
+  let current = 0;
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => showSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = dotsWrap.querySelectorAll('span');
+  function showSlide(i) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (i + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  document.getElementById('t-prev').addEventListener('click', () => showSlide(current - 1));
+  document.getElementById('t-next').addEventListener('click', () => showSlide(current + 1));
+
+
+  // ---------- floating brand card collage (anime.js, scroll-scrubbed) ----------
+  // Drop logo files into /images/brands/ with these filenames, or edit paths below.
+  const BRANDS = [
+    { image: '/images/brands/tibros.png',            name: 'Panasonic' },
+    { image: '/images/brands/maharajawhiteline.png', name: 'Maharaja Whiteline' },
+    { image: '/images/brands/arizy.png',             name: 'Arizy' },
+    { image: '/images/brands/bajaj.png',             name: 'Bajaj' },
+    { image: '/images/brands/milton.png',            name: 'Milton' },
+    { image: '/images/brands/prestige.png',          name: 'Sthal' },
+    { image: '/images/brands/bonton.png',            name: 'Bonton' },
+    { image: '/images/brands/futura.png',            name: 'Futura' },
+    { image: '/images/brands/boss.png',              name: 'Boss' },
+    { image: '/images/brands/borosil.png',           name: 'Borosil' },
+    { image: '/images/brands/hawkins.png',           name: 'Hawkins' },
+    { image: '/images/brands/vinod.png',             name: 'Vinod' },
+    { image: '/images/brands/bergner.png',           name: 'Bergner' }
+  ];
+
+  // Desktop collage layout — spread across 4 organic rows (no awkward overlaps).
+  const COLLAGE = [
+    { x:  2, y:  3, w: 250, rot: -4, z: 5, depth: .8,  from: { x: -520, y:   90, rot: -18, scale: .72 } }, // Tibros
+    { x: 27, y:  2, w: 205, rot:  2, z: 3, depth: .55, from: { x:  -60, y: -420, rot:  12, scale: .78 } }, // Maharaja
+    { x: 50, y:  5, w: 195, rot: -2, z: 4, depth: .7,  from: { x:  300, y: -380, rot: -14, scale: .75 } }, // Arizy
+    { x: 75, y:  2, w: 215, rot:  3, z: 2, depth: .5,  from: { x:  520, y: -100, rot:  16, scale: .72 } }, // Bajaj
+    { x:  5, y: 28, w: 210, rot:  3, z: 4, depth: .7,  from: { x: -520, y:  120, rot:  15, scale: .76 } }, // Boss
+    { x: 29, y: 26, w: 205, rot: -3, z: 7, depth: 1.1, from: { x:  -80, y:  440, rot:  14, scale: .7 } },  // Prestige
+    { x: 52, y: 28, w: 195, rot:  2, z: 3, depth: .55, from: { x:  480, y:  260, rot:  18, scale: .78 } }, // Futura
+    { x: 77, y: 27, w: 190, rot: -3, z: 5, depth: .85, from: { x:  380, y:  420, rot: -12, scale: .74 } }, // Bergner
+    { x:  2, y: 52, w: 225, rot:  2, z: 6, depth: .9,  from: { x: -420, y:  320, rot: -16, scale: .75 } }, // Milton
+    { x: 26, y: 54, w: 185, rot:  4, z: 3, depth: .6,  from: { x:  -60, y:  480, rot:  13, scale: .78 } }, // Bonton
+    { x: 48, y: 53, w: 195, rot: -2, z: 6, depth: .75, from: { x:  340, y:  500, rot: -12, scale: .74 } }, // Hawkins
+    { x: 72, y: 52, w: 205, rot: -4, z: 4, depth: .65, from: { x:  540, y:  140, rot: -17, scale: .73 } }, // Vinod
+    { x: 38, y: 76, w: 260, rot: -1, z: 8, depth: 1.25,from: { x:   40, y:  560, rot:   8, scale: .7 } }  // Borosil (feature)
+  ];
+
+  const stage = document.getElementById('collage-stage');
+  const brandsSection = document.getElementById('brands');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover:hover) and (min-width:900px)').matches;
+  const isMobile = () => window.innerWidth < 768;
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+
+  // build cards: .brand-card > .card-tilt (mouse) > .card-float (idle float) > img
+  const cards = BRANDS.map((brand, i) => {
+    const cfg = COLLAGE[i];
+    const el = document.createElement('div');
+    el.className = 'brand-card';
+    const tilt = document.createElement('div');
+    tilt.className = 'card-tilt';
+    const float = document.createElement('div');
+    float.className = 'card-float';
+    const img = document.createElement('img');
+    img.src = brand.image;
+    img.alt = brand.name + ' logo';
+    img.loading = 'lazy';
+    img.addEventListener('error', () => {
+      const fb = document.createElement('div');
+      fb.className = 'brand-fallback';
+      fb.style.fontSize = '19px';
+      fb.textContent = brand.name;
+      img.replaceWith(fb);
+    }, { once: true });
+    float.appendChild(img);
+    tilt.appendChild(float);
+    el.appendChild(tilt);
+    stage.appendChild(el);
+    return { el, tilt, float, cfg, enter: null, floatAnim: null };
+  });
+
+  function layout() {
+    const mobile = isMobile();
+    cards.forEach(({ el, cfg }) => {
+      if (mobile) {
+        el.style.left = el.style.top = el.style.width = '';
+        el.style.zIndex = '';
+      } else {
+        el.style.left = cfg.x + '%';
+        el.style.top = cfg.y + '%';
+        el.style.width = cfg.w + 'px';
+        el.style.zIndex = cfg.z;
+      }
+    });
+  }
+
+  // entrance timelines — created per mode, scrubbed with scroll via .seek()
+  function buildEntrances() {
+    const mobile = isMobile();
+    cards.forEach((c, i) => {
+      if (c.enter) c.enter.pause();
+      if (mobile) {
+        // phone: every card rises up from below as it approaches the viewport
+        c.enter = anime({
+          targets: c.el,
+          translateY: [80, 0],
+          translateX: [0, 0],
+          rotate: [c.cfg.rot + (i % 2 === 0 ? -5 : 5), c.cfg.rot],
+          scale: [0.94, 1],
+          opacity: [0, 1],
+          duration: 900, easing: 'easeOutCubic', autoplay: false
+        });
+      } else {
+        c.enter = anime({
+          targets: c.el,
+          translateX: [c.cfg.from.x, 0],
+          translateY: [c.cfg.from.y, 0],
+          rotate: [c.cfg.rot + c.cfg.from.rot, c.cfg.rot],
+          scale: [c.cfg.from.scale, 1],
+          opacity: [0, 1],
+          duration: 1000, easing: 'easeOutCubic', autoplay: false
+        });
+      }
+    });
+    // idle floating loop (desktop only — phones stay clean & professional)
+    cards.forEach((c, i) => {
+      if (c.floatAnim) c.floatAnim.pause();
+      c.floatAnim = null;
+      if (!mobile && !reducedMotion) {
+        c.floatAnim = anime({
+          targets: c.float,
+          translateY: [-6 - i % 3, 6 + i % 3],
+          rotate: [-(0.7 + (i % 3) * 0.2), 0.7 + (i % 3) * 0.2],
+          duration: 2600 + i * 140,
+          delay: i * 120,
+          loop: true, direction: 'alternate', easing: 'easeInOutSine', autoplay: true
+        });
+      }
+    });
+    if (reducedMotion) cards.forEach(c => c.enter.seek(1000));
+  }
+
+  // mouse parallax (desktop tilt wrapper)
+  let mx = 0, my = 0, tmx = 0, tmy = 0;
+  if (finePointer && !reducedMotion) {
+    brandsSection.addEventListener('mousemove', e => {
+      const r = stage.getBoundingClientRect();
+      tmx = ((e.clientX - r.left) / r.width - .5) * 2;
+      tmy = ((e.clientY - r.top) / r.height - .5) * 2;
+    });
+    brandsSection.addEventListener('mouseleave', () => { tmx = 0; tmy = 0; });
+  }
+
+  let collageActive = false, currentMode = null;
+  new IntersectionObserver(entries => { collageActive = entries[0].isIntersecting; },
+    { rootMargin: '20% 0px 20% 0px' }).observe(brandsSection);
+
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      layout();
+      if (isMobile() !== currentMode) { currentMode = isMobile(); buildEntrances(); }
+    }, 180);
+  });
+
+  function frame() {
+    requestAnimationFrame(frame);
+    if (!collageActive || reducedMotion) return;
+    const mobile = isMobile();
+    const vh = window.innerHeight;
+
+    if (mobile) {
+      // per-card scrub: card rises as its own position enters the viewport
+      cards.forEach(c => {
+        const r = c.el.getBoundingClientRect();
+        if (r.top > vh + 80 || r.bottom < -80) return;
+        const p = clamp01((vh * 0.94 - r.top) / (vh * 0.5));
+        c.enter.seek(p * 900);
+      });
+    } else {
+      const rect = stage.getBoundingClientRect();
+      const p = clamp01((vh * 0.95 - rect.top) / (rect.height * .72));
+      cards.forEach((c, i) => {
+        const local = clamp01((p - i * .05) / .48);
+        c.enter.seek(local * 1000);
+      });
+      // smooth mouse tilt
+      mx += (tmx - mx) * .06;
+      my += (tmy - my) * .06;
+      cards.forEach(c => {
+        c.tilt.style.transform = 'rotateY(' + (mx * 5 * c.cfg.depth) + 'deg) rotateX(' + (-my * 4 * c.cfg.depth) + 'deg)';
+      });
+    }
+  }
+
+  layout();
+  currentMode = isMobile();
+  buildEntrances();
+  requestAnimationFrame(frame);
+
+  // contact form -> whatsapp
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    let text = `Hi, my name is ${name}.\nPhone: ${phone}`;
+    if (email) text += `\nEmail: ${email}`;
+    text += `\nMessage: ${message}`;
+    window.open(`https://wa.me/919998246752?text=${encodeURIComponent(text)}`, '_blank');
+    this.reset();
+  });
+</script>
+</body>
 </html>
