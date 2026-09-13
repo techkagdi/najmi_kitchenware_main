@@ -353,28 +353,82 @@
   .about .stat span{ font-size:12.5px; color:#a9a49a; letter-spacing:.05em; text-transform:uppercase;}
   @media(max-width:800px){ .about-grid{grid-template-columns:1fr;} }
 
-  /* ---------- Owner ---------- */
+  /* ---------- Legacy: Founder (gold) + two sons below ---------- */
   .owner{ background:var(--paper); }
-  .owner-grid{ display:grid; grid-template-columns:.55fr 1.45fr; gap:60px; align-items:center;}
-  .owner-photo{
-    width:100%; aspect-ratio:1/1; border-radius:50%; border:2px dashed var(--accent);
-    position:relative; overflow:hidden;
-    background:var(--accent-soft); text-align:center; max-width:280px; margin:0 auto;
+  .legacy-founder-row{ display:flex; justify-content:center; margin-bottom:54px; }
+  .legacy-sons-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px;
+    max-width:780px; margin:0 auto;
   }
-  .owner-photo img{
-    width:100%; height:100%; object-fit:cover; display:block; border-radius:50%;
+  .legacy-card{ text-align:center; }
+  .legacy-card.founder{ width:100%; max-width:300px; }
+
+  /* founder — special gold treatment */
+  .legacy-card.founder{
+    position:relative; padding:34px 22px 28px; border-radius:22px;
+    background:radial-gradient(120% 100% at 50% 0%, rgba(200,135,63,.10), transparent 70%);
   }
-  .owner-photo-fallback{
+
+  .legacy-card.founder-2{
+    position:relative; padding:34px 22px 28px; border-radius:22px;
+  }
+
+  .legacy-card.founder::before{
+    content:""; position:absolute; inset:0; border-radius:22px;
+    border:1px solid rgba(200,135,63,.25); pointer-events:none;
+  }
+  .legacy-photo-wrap{ position:relative; width:100%; max-width:190px; margin:0 auto 20px; }
+  .legacy-sons-row .legacy-photo-wrap{ max-width:150px; }
+  .legacy-card.founder .legacy-photo-wrap::before{
+    content:""; position:absolute; inset:-6px; border-radius:50%; z-index:0;
+    background:linear-gradient(135deg,#f4e0ac,#c8873f 45%,#8a5a22);
+    box-shadow:0 10px 26px rgba(168,116,46,.35);
+  }
+
+.legacy-card.founder-2 .legacy-photo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 70%;
+    z-index: 0;
+    background: linear-gradient(135deg, #f4e0ac, #c8873f 45%, #8a5a22);
+    box-shadow: 0 10px 26px rgba(168,116,46,.25);
+}
+  .legacy-photo{
+    position:relative; z-index:1; width:100%; aspect-ratio:1/1; border-radius:50%; overflow:hidden;
+    background:var(--accent-soft); border:3px solid var(--paper);
+  }
+  .legacy-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .legacy-photo-fallback{
     position:absolute; inset:0; display:none; flex-direction:column; align-items:center; justify-content:center;
-    gap:10px; color:var(--accent-dark); padding:20px;
+    gap:8px; color:var(--accent-dark); padding:18px;
   }
-  .owner-photo-fallback i{ font-size:44px; }
-  .owner-photo-fallback span{ font-size:12.5px; letter-spacing:.03em; max-width:16ch; }
-  .owner-quote{ font-family:'Fraunces',serif; font-size:22px; font-weight:400; color:var(--ink); max-width:52ch; position:relative; padding-left:26px; border-left:2px solid var(--accent);}
-  .owner-name{ margin-top:22px; font-size:14px; letter-spacing:.03em; }
-  .owner-name b{ display:block; font-family:'Fraunces',serif; font-size:17px; font-weight:600; }
-  .owner-name span{ color:var(--mute); font-size:13px; }
-  @media(max-width:800px){ .owner-grid{grid-template-columns:1fr; text-align:center;} .owner-quote{padding-left:0; border-left:0; border-top:2px solid var(--accent); padding-top:22px; margin:0 auto;} }
+  .legacy-photo-fallback i{ font-size:36px; }
+  .legacy-photo-fallback span{ font-size:11px; letter-spacing:.03em; max-width:14ch; }
+  .founder-badge{
+    position:absolute; left:50%; bottom:-4px; transform:translateX(-50%); z-index:2;
+    background:linear-gradient(135deg,#f4e0ac,#c8873f); color:#3a2408;
+    font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    padding:5px 14px; border-radius:20px; box-shadow:0 4px 10px rgba(140,95,35,.35);
+  }
+  .legacy-card.founder .legacy-name{
+    font-family:'Fraunces',serif; font-size:24px; font-weight:600;
+    background:linear-gradient(135deg,#e8b96b,#a06a2e);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .legacy-card.founder .legacy-title{ color:var(--accent-dark); }
+  .legacy-name{ font-family:'Fraunces',serif; font-size:19px; font-weight:600; }
+  .legacy-title{
+    font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--mute);
+    margin-top:6px; margin-bottom:13px; font-weight:600;
+  }
+  .legacy-title .loc{ color:var(--accent-dark); }
+  .legacy-text{ font-size:14px; color:var(--mute); max-width:28ch; margin:0 auto; line-height:1.72; }
+  @media(max-width:760px){
+    .legacy-founder-row{ margin-bottom:44px; }
+    .legacy-sons-row{ grid-template-columns:1fr; gap:40px; }
+  }
+
 
   /* ---------- Testimonials ---------- */
   .testimonials{ background:var(--ink); color:#fff; }
@@ -475,7 +529,7 @@
   @keyframes pop{ from{ transform:scale(0); opacity:0;} to{ transform:scale(1); opacity:1;} }
 </style>
 
-<base target="_blank">
+
 </head>
 <body class="locked">
 
@@ -496,7 +550,7 @@
       <li><a href="#top" class="nav-link">Home</a></li>
       <li><a href="#brands" class="nav-link">Brands</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#owner" class="nav-link">Owner</a></li>
+      <li><a href="#owner" class="nav-link">Our Story</a></li>
       <li><a href="#testimonials" class="nav-link">Reviews</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -560,29 +614,76 @@
       <div class="stats">
         <div class="stat"><b>21+</b><span>Leading Brands</span></div>
         <div class="stat"><b>1 Lakh+</b><span>Happy Customers</span></div>
-        <div class="stat"><b>Est. 1980</b><span>In Bharuch</span></div>
+        <div class="stat"><b>Est. 1974</b><span>In Bharuch</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= OWNER ================= -->
+<!-- ================= LEGACY: FOUNDER + TWO SONS ================= -->
 <section class="owner" id="owner">
-  <div class="wrap owner-grid reveal">
-    <div class="owner-photo">
-      <!-- 👇 Just replace this src with your photo's filename/link — that's it -->
-      <img src="images/logo.png" alt="Owner of Najmi Kitchenware"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="owner-photo-fallback">
-        <i class="fa-solid fa-user"></i>
-        <span>Owner photo goes here</span>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Our Story</div>
+      <h2>A Family Legacy</h2>
+    </div>
+
+    <div class="legacy-founder-row reveal">
+      <div class="legacy-card founder">
+        <div class="legacy-photo-wrap">
+          <div class="legacy-photo">
+            <!-- 👇 Replace with the founder's photo -->
+            <img src="images/najmuddin.png" alt="Late Najmuddin Kachwala, Founder of Najmi Kitchenware"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="legacy-photo-fallback">
+              <i class="fa-solid fa-user"></i>
+              <span>Founder's photo goes here</span>
+            </div>
+          </div>
+          <div class="founder-badge">Founder</div>
+        </div>
+        <div class="legacy-name">Najmuddin Kachwala</div>
+        <div class="legacy-title">Est. 1974 · In Loving Memory</div>
+        <p class="legacy-text">Najmi Kitchenware was founded by the late Najmuddin Kachwala, built on a simple belief — every kitchen deserves honest quality and real advice. His dedication laid the foundation this store still stands on today.</p>
       </div>
     </div>
-    <div>
-      <div class="eyebrow">A Word From the Owner</div>
-      <p class="owner-quote">"At Najmi Kitchenware, every product on our shelves is something I'd trust in my own kitchen. Our goal has always been simple — honest quality and real advice for every customer who walks through our doors. Thank you for being part of our story."</p>
-      <div class="owner-name"><b>Hussain Kachwala</b><span>Owner, Najmi Kitchenware</span></div>
+
+    <div class="legacy-sons-row reveal-stagger">
+      <div class="legacy-card founder-2">
+        <div class="legacy-photo-wrap">
+          <div class="legacy-photo">
+            <!-- 👇 Replace with Hussain bhai's photo -->
+            <img src="images/hussain.png" alt="Hussain Kachwala, present owner of Najmi Kitchenware"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="legacy-photo-fallback">
+              <i class="fa-solid fa-user"></i>
+              <span>Hussain bhai's photo goes here</span>
+            </div>
+          </div>
+        </div>
+        <div class="legacy-name">Hussain Kachwala</div>
+        <div class="legacy-title">Carrying the Legacy Forward</div>
+        <p class="legacy-text">Hussain bhai carries his father's legacy forward — bringing the same care, trust, and personal attention to every customer who walks through our doors.</p>
+      </div>
+
+      <div class="legacy-card founder-2">
+        <div class="legacy-photo-wrap">
+          <div class="legacy-photo">
+            <!-- 👇 Replace with the second son's photo -->
+            <img src="images/abduttayeb.png" alt="Abduttayeb  Kachwala, Director of Sales at The Floorist"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="legacy-photo-fallback">
+              <i class="fa-solid fa-user"></i>
+              <span>Second son's photo goes here</span>
+            </div>
+          </div>
+        </div>
+        <div class="legacy-name">Abduttayeb  Kachwala</div>
+        <div class="legacy-title">Director of Sales, The Floorist <span class="loc">· Dubai</span></div>
+        <p class="legacy-text">Following his own path abroad, Abduttayeb  Kachwala leads sales at The Floorist in Dubai — carrying the same values forward, just down a different road.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -695,7 +796,7 @@
           <li><a href="#top">Home</a></li>
           <li><a href="#brands">Brands</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#owner">Owner</a></li>
+          <li><a href="#owner">Our Story</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1058,7 +1159,7 @@
     tilt.appendChild(float);
     el.appendChild(tilt);
     stage.appendChild(el);
-    return { el, tilt, float, cfg, enter: null, floatAnim: null };
+    return { el, tilt, float, cfg, enter: null, floatAnim: null, smoothed: 0 };
   });
 
   function layout() {
@@ -1081,6 +1182,7 @@
     const mobile = isMobile();
     cards.forEach((c, i) => {
       if (c.enter) c.enter.pause();
+      c.smoothed = 0;
       if (mobile) {
         // phone: every card rises up from below as it approaches the viewport
         c.enter = anime({
@@ -1157,15 +1259,19 @@
       cards.forEach(c => {
         const r = c.el.getBoundingClientRect();
         if (r.top > vh + 80 || r.bottom < -80) return;
-        const p = clamp01((vh * 0.94 - r.top) / (vh * 0.5));
-        c.enter.seek(p * 900);
+        const target = clamp01((vh * 0.94 - r.top) / (vh * 0.5));
+        c.smoothed += (target - c.smoothed) * 0.18;
+        if (Math.abs(target - c.smoothed) < 0.001) c.smoothed = target;
+        c.enter.seek(c.smoothed * 900);
       });
     } else {
       const rect = stage.getBoundingClientRect();
       const p = clamp01((vh * 0.95 - rect.top) / (rect.height * .72));
       cards.forEach((c, i) => {
-        const local = clamp01((p - i * .05) / .48);
-        c.enter.seek(local * 1000);
+        const target = clamp01((p - i * .05) / .48);
+        c.smoothed += (target - c.smoothed) * 0.18;
+        if (Math.abs(target - c.smoothed) < 0.001) c.smoothed = target;
+        c.enter.seek(c.smoothed * 1000);
       });
       // smooth mouse tilt
       mx += (tmx - mx) * .06;
